@@ -239,5 +239,11 @@ interviewTabButton.addEventListener("click", function () {
   showAllDataOnScreen();
 });
 
+rejectedTabButton.addEventListener("click", function () {
+  selectedTabName = "rejected";
+  makeTabActive(rejectedTabButton);
+  showAllDataOnScreen();
+});
+
 
 showAllDataOnScreen();
