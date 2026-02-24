@@ -23,6 +23,34 @@
           <p id="rejectedCount" class="m-0 mt-2 text-4xl font-extrabold text-rose-500">0</p>
         </div>
       </section>
+      <section>
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="m-0 text-2xl sm:text-4xl font-extrabold text-blue-900">Available Jobs</h2>
+          <p class="m-0 text-2xl sm:text-4xl font-bold text-slate-500"><span id="tabCount">0</span> jobs</p>
+        </div>
+
+        <div class="mt-4 flex gap-2">
+          <button id="allBtn" class="tab-btn active-tab min-w-[84px] h-10 px-3 border rounded-md text-sm font-bold border-blue-500 bg-blue-500 text-white">All</button>
+          <button id="interviewBtn" class="tab-btn min-w-[84px] h-10 px-3 border rounded-md text-sm font-bold border-slate-200 bg-white text-slate-500">Interview</button>
+          <button id="rejectedBtn" class="tab-btn min-w-[84px] h-10 px-3 border rounded-md text-sm font-bold border-slate-200 bg-white text-slate-500">Rejected</button>
+        </div>
+
+        <div id="jobList" class="mt-4 grid gap-3"></div>
+
+        <div id="emptyBox" class="hidden mt-4 min-h-[300px] sm:min-h-[500px] border border-slate-200 rounded-lg bg-white grid place-content-center text-center px-4">
+          <div class="mb-2 flex justify-center">
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 3H14L19 8V20C19 20.5523 18.5523 21 18 21H7C6.44772 21 6 20.5523 6 20V4C6 3.44772 6.44772 3 7 3Z" fill="#7BA3F3" />
+              <path d="M14 3V8H19" fill="#6B92E8" />
+              <path d="M9 11H15" stroke="#F9FBFF" stroke-width="1.2" stroke-linecap="round" />
+              <path d="M9 14H15" stroke="#F9FBFF" stroke-width="1.2" stroke-linecap="round" />
+              <path d="M9 17H14" stroke="#F9FBFF" stroke-width="1.2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="m-0 text-3xl sm:text-5xl font-extrabold text-blue-900">No jobs available</h3>
+          <p class="m-0 mt-2 text-base sm:text-xl text-slate-500">Check back soon for new job opportunities</p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
