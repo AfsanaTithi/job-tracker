@@ -233,5 +233,11 @@ allTabButton.addEventListener("click", function () {
   showAllDataOnScreen();
 });
 
+interviewTabButton.addEventListener("click", function () {
+  selectedTabName = "interview";
+  makeTabActive(interviewTabButton);
+  showAllDataOnScreen();
+});
+
 
 showAllDataOnScreen();
