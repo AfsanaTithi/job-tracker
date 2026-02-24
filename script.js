@@ -227,4 +227,11 @@ function showAllDataOnScreen() {
   jobsContainerBox.innerHTML = cardHtmlText;
 }
 
+allTabButton.addEventListener("click", function () {
+  selectedTabName = "all";
+  makeTabActive(allTabButton);
+  showAllDataOnScreen();
+});
+
+
 showAllDataOnScreen();
