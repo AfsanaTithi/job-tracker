@@ -245,5 +245,48 @@ rejectedTabButton.addEventListener("click", function () {
   showAllDataOnScreen();
 });
 
+jobsContainerBox.addEventListener("click", function (event) {
+  const clickedElement = event.target;
+  const clickedJobId = Number(clickedElement.getAttribute("data-id"));
+
+  if (!clickedJobId) {
+    return;
+  }
+
+  if (clickedElement.classList.contains("interview-btn")) {
+    for (let i = 0; i < allJobsData.length; i++) {
+      if (allJobsData[i].id === clickedJobId) {
+        if (allJobsData[i].status === "interview") {
+          allJobsData[i].status = "";
+        } else {
+          allJobsData[i].status = "interview";
+        }
+      }
+    }
+  }
+
+  if (clickedElement.classList.contains("rejected-btn")) {
+    for (let j = 0; j < allJobsData.length; j++) {
+      if (allJobsData[j].id === clickedJobId) {
+        if (allJobsData[j].status === "rejected") {
+          allJobsData[j].status = "";
+        } else {
+          allJobsData[j].status = "rejected";
+        }
+      }
+    }
+  }
+
+  if (clickedElement.classList.contains("delete-btn")) {
+    for (let k = 0; k < allJobsData.length; k++) {
+      if (allJobsData[k].id === clickedJobId) {
+        allJobsData.splice(k, 1);
+        break;
+      }
+    }
+  }
+
+  showAllDataOnScreen();
+});
 
 showAllDataOnScreen();
